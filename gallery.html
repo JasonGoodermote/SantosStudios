@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery — Carolina Santos Studios. Browse our portfolio of hair, nails, lashes, and beauty work." />
+  <title>Gallery | Carolina Santos Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══════════════════════════════════════ -->
+<nav class="nav scrolled" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        Carolina Santos
+        <span>Beauty Studios</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://calendly.com/YOUR-LINK" target="_blank" class="nav__book">Book Now</a></li>
+      </ul>
+      <div class="nav__hamburger" aria-label="Menu" role="button">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-gold" style="text-align:center;">Book Now</a>
+</div>
+
+<!-- ═══ PAGE HERO ════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=1600&q=85&auto=format');"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <p class="page-hero__label">Our Portfolio</p>
+      <h1 class="page-hero__title">Beauty in Every<br><em>Detail</em></h1>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GALLERY PAGE ══════════════════════════════════════ -->
+<section class="gallery-page">
+  <div class="container">
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filters fade-in">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="hair">Hair</button>
+      <button class="filter-btn" data-filter="nails">Nails</button>
+      <button class="filter-btn" data-filter="facials">Facials</button>
+      <button class="filter-btn" data-filter="lashes">Lashes & Brows</button>
+      <button class="filter-btn" data-filter="makeup">Makeup</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="gallery-masonry fade-in">
+
+      <div class="gallery-masonry__item" data-category="hair">
+        <img src="https://images.unsplash.com/photo-1522337094269-9b2ffb49f2dd?w=600&q=80&auto=format" alt="Hair color" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="nails">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format" alt="Nail art" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="lashes">
+        <img src="https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=600&q=80&auto=format" alt="Lash extensions" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="hair">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format" alt="Balayage" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="facials">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format" alt="Facial treatment" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="makeup">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format" alt="Makeup artistry" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="hair">
+        <img src="https://images.unsplash.com/photo-1583441424221-3f43e3fcb9f4?w=600&q=80&auto=format" alt="Hair styling" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="nails">
+        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=600&q=80&auto=format" alt="Gel nails" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="lashes">
+        <img src="https://images.unsplash.com/photo-1551489186-cf8726f514f8?w=600&q=80&auto=format" alt="Lash lift" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="hair">
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format" alt="Color treatment" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="makeup">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80&auto=format" alt="Bridal makeup" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+      <div class="gallery-masonry__item" data-category="facials">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80&auto=format" alt="Skincare" loading="lazy" />
+        <div class="gallery-masonry__overlay"><span>+</span></div>
+      </div>
+
+    </div>
+
+    <!-- CTA Below Gallery -->
+    <div style="text-align:center;margin-top:72px;" class="fade-in">
+      <p class="section-label">Inspired?</p>
+      <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--charcoal);margin-bottom:24px;">Let's Create <em>Your</em> Look</h3>
+      <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary">Book Your Appointment</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ LIGHTBOX ══════════════════════════════════════════ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="Gallery image" />
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">Carolina Santos</div>
+        <div class="footer__logo-sub">Beauty Studios</div>
+        <p class="footer__tagline">Your sanctuary for total beauty transformation. Where every visit is an experience in personalized, luxury care.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">&#x1F4F7;</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="TikTok">&#9654;</a>
+          <a href="#" aria-label="Pinterest">P</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__heading">Navigation</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Services</div>
+        <ul class="footer__links">
+          <li><a href="services.html">Hair</a></li>
+          <li><a href="services.html">Nails</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Lashes</a></li>
+          <li><a href="services.html">Makeup</a></li>
+          <li><a href="services.html">Brows</a></li>
+          <li><a href="services.html">Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Contact</div>
+        <div class="footer__contact-item"><span>📍</span><span>[Your Address]<br>[City, State ZIP]</span></div>
+        <div class="footer__contact-item"><span>✉</span><span><a href="mailto:hello@yourstudio.com">hello@yourstudio.com</a></span></div>
+        <div class="footer__contact-item"><span>☎</span><span><a href="tel:+10000000000">(000) 000-0000</a></span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Carolina Santos Studios. All rights reserved.</span>
+      <span style="color:var(--gold);font-size:0.72rem;letter-spacing:0.12em;">Luxury Beauty · [Your City]</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
