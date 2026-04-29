@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Services at Carolina Santos Studios — Hair, Nails, Facials, Makeup, Lashes, Brows, and Wellness." />
+  <title>Services | Carolina Santos Studios</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .services-page { padding: 80px 0 120px; background: var(--warm-white); }
+    .service-category { margin-bottom: 96px; }
+    .service-category__header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-category__icon {
+      width: 60px; height: 60px;
+      background: var(--blush-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .service-category__title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+    .service-category__sub {
+      font-size: 0.86rem;
+      color: var(--light-text);
+      margin-top: 4px;
+    }
+    .service-items-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .service-item {
+      background: var(--cream);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .service-item:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+    .service-item__image { height: 240px; overflow: hidden; }
+    .service-item__image img { height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+    .service-item:hover .service-item__image img { transform: scale(1.06); }
+    .service-item__body { padding: 28px 24px; }
+    .service-item__name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .service-item__desc {
+      font-size: 0.86rem;
+      color: var(--light-text);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .service-item__price {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    @media (max-width: 900px) {
+      .service-items-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .service-items-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══════════════════════════════════════ -->
+<nav class="nav scrolled" id="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        Carolina Santos
+        <span>Beauty Studios</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://calendly.com/YOUR-LINK" target="_blank" class="nav__book">Book Now</a></li>
+      </ul>
+      <div class="nav__hamburger" aria-label="Menu" role="button">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="nav__drawer">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-gold" style="text-align:center;">Book Now</a>
+</div>
+
+<!-- ═══ PAGE HERO ════════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&q=85&auto=format');"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <p class="page-hero__label">What We Offer</p>
+      <h1 class="page-hero__title">Our <em>Signature</em><br>Services</h1>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES INTRO ════════════════════════════════════ -->
+<div style="background:var(--cream);padding:60px 0;text-align:center;">
+  <div class="container--narrow">
+    <p class="section-label fade-in">Crafted for You</p>
+    <p class="fade-in delay-1" style="font-family:var(--font-display);font-size:1.35rem;font-style:italic;font-weight:400;color:var(--charcoal);line-height:1.6;margin-bottom:16px;">
+      "Every service is a ritual. Every client, a masterpiece."
+    </p>
+    <p class="fade-in delay-2" style="font-size:0.9rem;color:var(--light-text);max-width:560px;margin:0 auto;line-height:1.85;">
+      From transformative hair color to restorative wellness treatments, each service at Carolina Santos Studios is tailored to your unique needs, preferences, and beauty vision.
+    </p>
+  </div>
+</div>
+
+<!-- ═══ SERVICES CONTENT ══════════════════════════════════ -->
+<section class="services-page">
+  <div class="container">
+
+    <!-- HAIR -->
+    <div class="service-category fade-in">
+      <div class="service-category__header">
+        <div class="service-category__icon">✂</div>
+        <div>
+          <h2 class="service-category__title">Hair</h2>
+          <p class="service-category__sub">Color, cuts, and styling that honor your hair's natural beauty.</p>
+        </div>
+      </div>
+      <div class="service-items-grid">
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1522337094269-9b2ffb49f2dd?w=600&q=80&auto=format" alt="Balayage" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Balayage & Color</h3>
+            <p class="service-item__desc">Hand-painted, sun-kissed color that moves naturally with your hair. Customized to your skin tone and lifestyle.</p>
+            <div class="service-item__price">Starting at $180</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format" alt="Haircut" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Precision Cut & Style</h3>
+            <p class="service-item__desc">A masterful cut that complements your face shape, texture, and lifestyle — finished with a flawless blowout.</p>
+            <div class="service-item__price">Starting at $85</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80&auto=format" alt="Keratin Treatment" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Keratin Treatment</h3>
+            <p class="service-item__desc">Smooth, frizz-free hair that lasts up to 4 months. Your morning routine, transformed.</p>
+            <div class="service-item__price">Starting at $220</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAILS -->
+    <div class="service-category fade-in">
+      <div class="service-category__header">
+        <div class="service-category__icon">💅</div>
+        <div>
+          <h2 class="service-category__title">Nails</h2>
+          <p class="service-category__sub">Polish, art, and care for hands and feet that say everything.</p>
+        </div>
+      </div>
+      <div class="service-items-grid">
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format" alt="Manicure" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Luxury Manicure</h3>
+            <p class="service-item__desc">Shape, cuticle care, hand massage, and your choice of regular or gel polish — elevated to an art form.</p>
+            <div class="service-item__price">Starting at $45</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=600&q=80&auto=format" alt="Pedicure" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Spa Pedicure</h3>
+            <p class="service-item__desc">A restorative soak, exfoliation, callus treatment, and leg massage — pure bliss from the ankle down.</p>
+            <div class="service-item__price">Starting at $65</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format" alt="Nail Art" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Nail Art & Extensions</h3>
+            <p class="service-item__desc">From subtle nail art to sculpted extensions — bespoke designs that express your individual style.</p>
+            <div class="service-item__price">Starting at $80</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACIALS -->
+    <div class="service-category fade-in">
+      <div class="service-category__header">
+        <div class="service-category__icon">✨</div>
+        <div>
+          <h2 class="service-category__title">Facials</h2>
+          <p class="service-category__sub">Science-backed, results-driven skin treatments for your most radiant complexion.</p>
+        </div>
+      </div>
+      <div class="service-items-grid">
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80&auto=format" alt="Custom Facial" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Signature Facial</h3>
+            <p class="service-item__desc">A fully customized 60-minute facial designed around your skin's unique needs — hydration, clarity, anti-aging, or glow.</p>
+            <div class="service-item__price">Starting at $110</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format" alt="Microdermabrasion" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Microdermabrasion</h3>
+            <p class="service-item__desc">Resurface, refine, and reveal — this treatment dramatically improves texture, tone, and radiance.</p>
+            <div class="service-item__price">Starting at $135</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80&auto=format" alt="Chemical Peel" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Chemical Peel</h3>
+            <p class="service-item__desc">Targeted exfoliation that fades hyperpigmentation, minimizes pores, and delivers a luminous, refined complexion.</p>
+            <div class="service-item__price">Starting at $120</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LASHES -->
+    <div class="service-category fade-in">
+      <div class="service-category__header">
+        <div class="service-category__icon">👁</div>
+        <div>
+          <h2 class="service-category__title">Lashes & Brows</h2>
+          <p class="service-category__sub">Frame your eyes. Define your expression. Own your look.</p>
+        </div>
+      </div>
+      <div class="service-items-grid">
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=600&q=80&auto=format" alt="Lash Extensions" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Lash Extensions</h3>
+            <p class="service-item__desc">Classic, hybrid, or volume — individually applied lashes that look effortlessly beautiful every morning.</p>
+            <div class="service-item__price">Starting at $140</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1583441424221-3f43e3fcb9f4?w=600&q=80&auto=format" alt="Lash Lift" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Lash Lift & Tint</h3>
+            <p class="service-item__desc">Curl your natural lashes and add depth with a custom tint. Wake up with wide-open eyes — no mascara required.</p>
+            <div class="service-item__price">Starting at $95</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-item__image">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80&auto=format" alt="Brow Services" loading="lazy" />
+          </div>
+          <div class="service-item__body">
+            <h3 class="service-item__name">Brow Lamination & Shaping</h3>
+            <p class="service-item__desc">Sculpted, groomed, and perfectly shaped — brows that frame your face exactly as intended by nature (only better).</p>
+            <div class="service-item__price">Starting at $75</div>
+            <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-primary" style="font-size:0.7rem;padding:12px 24px;">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAKEUP + WELLNESS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;" class="fade-in">
+      <div>
+        <div class="service-category__header">
+          <div class="service-category__icon">💄</div>
+          <div>
+            <h2 class="service-category__title">Makeup</h2>
+            <p class="service-category__sub">Artistry for every occasion.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="service-item" style="display:grid;grid-template-columns:120px 1fr;min-height:unset;">
+            <div style="height:120px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=200&q=80&auto=format" alt="Bridal Makeup" loading="lazy" style="height:100%;object-fit:cover;" /></div>
+            <div class="service-item__body" style="padding:20px;">
+              <h3 class="service-item__name" style="font-size:1.1rem;">Bridal Makeup</h3>
+              <p class="service-item__desc" style="font-size:0.82rem;">Trial and wedding day application. Luminous, long-wear artistry built around you.</p>
+              <div class="service-item__price">Starting at $200</div>
+            </div>
+          </div>
+          <div class="service-item" style="display:grid;grid-template-columns:120px 1fr;min-height:unset;">
+            <div style="height:120px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=200&q=80&auto=format" alt="Event Makeup" loading="lazy" style="height:100%;object-fit:cover;" /></div>
+            <div class="service-item__body" style="padding:20px;">
+              <h3 class="service-item__name" style="font-size:1.1rem;">Event Glam</h3>
+              <p class="service-item__desc" style="font-size:0.82rem;">Date nights, galas, photoshoots, or any occasion that calls for your most stunning self.</p>
+              <div class="service-item__price">Starting at $95</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="service-category__header">
+          <div class="service-category__icon">🌿</div>
+          <div>
+            <h2 class="service-category__title">Wellness</h2>
+            <p class="service-category__sub">Beauty that begins from within.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="service-item" style="display:grid;grid-template-columns:120px 1fr;min-height:unset;">
+            <div style="height:120px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1583241475880-083f84372725?w=200&q=80&auto=format" alt="Scalp Treatment" loading="lazy" style="height:100%;object-fit:cover;" /></div>
+            <div class="service-item__body" style="padding:20px;">
+              <h3 class="service-item__name" style="font-size:1.1rem;">Scalp Ritual</h3>
+              <p class="service-item__desc" style="font-size:0.82rem;">A deeply relaxing treatment that cleanses, nourishes, and rebalances the scalp for optimal hair health.</p>
+              <div class="service-item__price">Starting at $80</div>
+            </div>
+          </div>
+          <div class="service-item" style="display:grid;grid-template-columns:120px 1fr;min-height:unset;">
+            <div style="height:120px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=200&q=80&auto=format" alt="Aromatherapy" loading="lazy" style="height:100%;object-fit:cover;" /></div>
+            <div class="service-item__body" style="padding:20px;">
+              <h3 class="service-item__name" style="font-size:1.1rem;">Aromatherapy Add-On</h3>
+              <p class="service-item__desc" style="font-size:0.82rem;">Elevate any service with a custom aromatherapy experience — stress relief, energy, or deep calm.</p>
+              <div class="service-item__price">Starting at $30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ════════════════════════════════════════ -->
+<section class="cta-banner">
+  <div class="container--narrow" style="text-align:center;">
+    <p class="section-label fade-in" style="color:var(--gold-light);">Ready?</p>
+    <h2 class="cta-banner__title fade-in delay-1">Your Transformation<br><em>Awaits</em></h2>
+    <p class="cta-banner__sub fade-in delay-2">Book your appointment today and let us create something beautiful — together.</p>
+    <div class="fade-in delay-3">
+      <a href="https://calendly.com/YOUR-LINK" target="_blank" class="btn btn-gold">Book Your Appointment</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">Carolina Santos</div>
+        <div class="footer__logo-sub">Beauty Studios</div>
+        <p class="footer__tagline">Your sanctuary for total beauty transformation. Where every visit is an experience in personalized, luxury care.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">&#x1F4F7;</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="TikTok">&#9654;</a>
+          <a href="#" aria-label="Pinterest">P</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__heading">Navigation</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Services</div>
+        <ul class="footer__links">
+          <li><a href="services.html">Hair</a></li>
+          <li><a href="services.html">Nails</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html">Lashes</a></li>
+          <li><a href="services.html">Makeup</a></li>
+          <li><a href="services.html">Brows</a></li>
+          <li><a href="services.html">Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Contact</div>
+        <div class="footer__contact-item"><span>📍</span><span>[Your Address]<br>[City, State ZIP]</span></div>
+        <div class="footer__contact-item"><span>✉</span><span><a href="mailto:hello@yourstudio.com">hello@yourstudio.com</a></span></div>
+        <div class="footer__contact-item"><span>☎</span><span><a href="tel:+10000000000">(000) 000-0000</a></span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 Carolina Santos Studios. All rights reserved.</span>
+      <span style="color:var(--gold);font-size:0.72rem;letter-spacing:0.12em;">Luxury Beauty · [Your City]</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
